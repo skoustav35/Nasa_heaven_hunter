@@ -60,7 +60,7 @@ export function DiscoveryLab() {
           </div>
           <h4 className="text-xl font-bold text-slate-300 mb-2">No Discoveries Yet</h4>
           <p className="text-slate-500 font-medium max-w-md mx-auto">
-            The AI agents haven't found any uncataloged exoplanets yet. Keep submitting unique TIC IDs to the observatory!
+            The AI agents haven't found any uncataloged targets yet. Keep submitting unique TIC IDs to the observatory!
           </p>
         </div>
       </motion.section>

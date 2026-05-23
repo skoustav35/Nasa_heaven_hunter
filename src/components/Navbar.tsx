@@ -21,7 +21,7 @@ export function Navbar() {
           <div className="bg-indigo-500/10 p-2.5 rounded-2xl border border-indigo-500/20 shadow-inner">
             <Telescope className="w-6 h-6" />
           </div>
-          <span className="font-display font-extrabold text-2xl tracking-tight text-slate-100">Sarkar<span className="text-indigo-400">ExoHunter</span></span>
+          <span className="font-display font-extrabold text-2xl tracking-tight text-slate-100">Sarkar<span className="text-indigo-400">OmniForge</span></span>
         </div>
         
         <div className="flex items-center gap-3">
@@ -74,7 +74,7 @@ export function Navbar() {
                         className="bg-slate-900 rounded-3xl p-6 md:p-8 shadow-2xl relative z-10 max-w-sm w-full border border-slate-700"
                       >
                         <h3 className="text-xl font-display font-bold text-slate-100 mb-2">Sign Out</h3>
-                        <p className="text-slate-400 font-medium mb-6 text-sm">Are you sure you want to log out of Sarkar ExoHunter?</p>
+                        <p className="text-slate-400 font-medium mb-6 text-sm">Are you sure you want to log out of Sarkar OmniForge?</p>
                         <div className="flex items-center gap-3 justify-end">
                           <button 
                             onClick={() => setShowSignOutConfirm(false)}

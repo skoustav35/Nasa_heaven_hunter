@@ -191,7 +191,7 @@ export function PlotsLab() {
               <div className="flex items-center justify-between mb-6 pointer-events-auto">
                 <div className="bg-slate-900/80 border border-slate-700/50 px-8 py-4 rounded-[2rem] backdrop-blur-md shadow-2xl">
                   <h3 className="text-2xl font-display font-extrabold text-slate-100 tracking-tight">{selectedImage.title}</h3>
-                  <p className="text-violet-400 font-black uppercase tracking-widest text-[10px] mt-1">Firebase Cloud • Sarkar ExoHunter</p>
+                  <p className="text-violet-400 font-black uppercase tracking-widest text-[10px] mt-1">Firebase Cloud • Sarkar OmniForge</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <button

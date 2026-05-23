@@ -65,7 +65,7 @@ export function Leaderboard() {
           </div>
           <h4 className="text-xl font-bold text-slate-300 mb-2">No Rankings Yet</h4>
           <p className="text-slate-500 font-medium max-w-md mx-auto">
-            The leaderboard is empty because no uncataloged exoplanets have been verified yet.
+            The leaderboard is empty because no uncataloged candidates have been verified yet.
           </p>
         </div>
       </motion.section>
@@ -85,7 +85,7 @@ export function Leaderboard() {
         </div>
         <div>
           <h2 className="text-2xl font-display font-extrabold text-slate-100">Global Leaderboard</h2>
-          <p className="text-sm font-medium text-slate-400 mt-1">Official rankings of vetted exoplanet discoveries.</p>
+          <p className="text-sm font-medium text-slate-400 mt-1">Official rankings of vetted discoveries.</p>
         </div>
       </div>
 

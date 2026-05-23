@@ -25,11 +25,11 @@ const TOOLS_LIST = [
   { name: 'compute_transit_statistics', desc: 'Calculate SNR, transit depth, baseline flux', category: 'Analysis' },
   { name: 'analyze_transit', desc: 'Run full 2-agent AI discovery pipeline', category: 'Analysis' },
   { name: 'run_discovery_loop', desc: 'Automated bulk scanning of multiple targets', category: 'Analysis' },
-  { name: 'classify_planet', desc: 'Classify planet type by radius and orbit', category: 'Analysis' },
-  { name: 'check_known_exoplanet', desc: 'Cross-reference TIC ID against known databases', category: 'Analysis' },
+  { name: 'classify_planet', desc: 'Classify candidate type by physical and orbit parameters', category: 'Analysis' },
+  { name: 'check_known_exoplanet', desc: 'Cross-reference TIC ID against known astronomical databases', category: 'Analysis' },
   { name: 'get_query_stream', desc: 'Read live analysis attempts from all researchers', category: 'Stream' },
   { name: 'create_query_card', desc: 'Log a new analysis attempt to the stream', category: 'Stream' },
-  { name: 'get_discoveries', desc: 'List all confirmed new exoplanet discoveries', category: 'Discovery' },
+  { name: 'get_discoveries', desc: 'List all confirmed new discoveries', category: 'Discovery' },
   { name: 'create_discovery_thesis', desc: 'Record a formal discovery thesis', category: 'Discovery' },
   { name: 'get_leaderboard', desc: 'Fetch global researcher rankings', category: 'Discovery' },
   { name: 'list_all_used_tic_ids', desc: 'List all unique TIC IDs across both discoveries and rejections', category: 'Discovery' },
@@ -42,7 +42,7 @@ const TOOLS_LIST = [
 ];
 
 const IDE_LIST = [
-  { name: 'Google Antigravity', path: 'Preferred IDE for ExoHunter', icon: '🚀', preferred: true },
+  { name: 'Google Antigravity', path: 'Preferred IDE for OmniForge', icon: '🚀', preferred: true },
   { name: 'Cursor', path: '~/.cursor/mcp.json', icon: '⚡' },
   { name: 'Windsurf', path: '~/.codeium/windsurf/mcp_config.json', icon: '🏄' },
   { name: 'Claude Desktop', path: '~/Library/Application Support/Claude/claude_desktop_config.json', icon: '🤖' },
@@ -138,7 +138,7 @@ export function McpConfigModal({ isOpen, onClose }: McpConfigModalProps) {
               {activeTab === 'config' && (
                 <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
                   <p className="text-sm font-medium text-slate-400 mb-4 leading-relaxed">
-                    Copy this JSON into your AI IDE's MCP configuration file. The ExoHunter MCP server connects your IDE's AI to the full exoplanet discovery pipeline.
+                    Copy this JSON into your AI IDE's MCP configuration file. The OmniForge MCP server connects your IDE's AI to the full transient discovery pipeline.
                   </p>
 
                   {/* Code block */}
@@ -231,7 +231,7 @@ export function McpConfigModal({ isOpen, onClose }: McpConfigModalProps) {
               {activeTab === 'tools' && (
                 <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
                   <p className="text-sm font-medium text-slate-400 mb-4">
-                    19 tools expose every ExoHunter capability to your AI IDE. The AI can autonomously discover exoplanets.
+                    19 tools expose every OmniForge capability to your AI IDE. The AI can autonomously discover deep-space transients.
                   </p>
                   <div className="space-y-2">
                     {TOOLS_LIST.map((tool, i) => (
@@ -256,7 +256,7 @@ export function McpConfigModal({ isOpen, onClose }: McpConfigModalProps) {
               {activeTab === 'setup' && (
                 <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}>
                   <p className="text-sm font-medium text-slate-400 mb-4">
-                    Configure your AI environment for Sarkar ExoHunter:
+                    Configure your AI environment for Sarkar OmniForge:
                   </p>
                   <div className="space-y-3">
                     {IDE_LIST.map((ide, i) => (

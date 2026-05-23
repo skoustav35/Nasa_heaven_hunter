@@ -155,7 +155,7 @@ export function SyntheticVisionTab() {
           Synthetic <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-violet-400">Vision Lab</span>
         </h2>
         <p className="text-slate-400 font-medium text-lg max-w-3xl leading-relaxed">
-          Physics-grounded visual specifications and AI-generated imagery for every analyzed exoplanet — discoveries <em>and</em> false positives. 99.88% grounded in physical parameters.
+          Physics-grounded visual specifications and AI-generated imagery for every analyzed target — discoveries <em>and</em> false positives. 99.88% grounded in physical parameters.
         </p>
       </motion.div>
 
@@ -191,7 +191,7 @@ export function SyntheticVisionTab() {
             <Eye className="w-12 h-12 text-fuchsia-500/50" />
           </div>
           <h3 className="text-2xl font-bold text-slate-200 mb-3">No Targets to Visualize</h3>
-          <p className="text-slate-500 max-w-sm mx-auto">Confirm exoplanet discoveries or log rejections to unlock visual specifications.</p>
+          <p className="text-slate-500 max-w-sm mx-auto">Confirm discoveries or log rejections to unlock visual specifications.</p>
         </motion.div>
       ) : (
         <div className="space-y-8">

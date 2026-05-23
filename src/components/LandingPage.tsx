@@ -63,14 +63,14 @@ export default function LandingPage({ onEnter }: { onEnter: () => void }) {
           <h1 className="text-6xl md:text-8xl font-display font-extrabold tracking-tighter mb-8 leading-[1.1]">
             Automated <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-amber-200 drop-shadow-sm">
-              Exoplanet Discovery
+              Transient Discovery
             </span>
           </h1>
           
           <p className="max-w-3xl mx-auto text-xl md:text-2xl text-slate-300 mb-12 leading-relaxed font-medium">
-            Sarkar ExoHunter is a thesis-grade, multi-agent AI pipeline. 
+            Sarkar OmniForge is a thesis-grade, multi-agent AI pipeline. 
             We ingest <strong className="text-indigo-300">real TESS satellite light curves</strong> from the NASA MAST archive and deploy deep-reasoning neural networks 
-            to autonomously vet and discover uncataloged worlds in deep space.
+            to autonomously vet and discover black holes, supernovae, and high-energy transients with high accuracy.
           </p>
 
           {/* Live Stats */}
@@ -112,9 +112,9 @@ export default function LandingPage({ onEnter }: { onEnter: () => void }) {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-24 w-full"
         >
           {[
-            { icon: Database, title: "Real Data Ingestion", desc: "Fetches authentic phase-folded light curves directly from the NASA MAST Archive (Exo.MAST API) for any TESS TIC target." },
+            { icon: Database, title: "Real Data Ingestion", desc: "Fetches authentic light curves directly from the NASA MAST Archive for any TESS TIC target." },
             { icon: BrainCircuit, title: "Multi-Agent Verifier", desc: "Dual Gemini models — Flash for rapid statistical filtering, Pro with Google Search grounding for deep archive verification." },
-            { icon: Telescope, title: "Thesis-Grade Output", desc: "Generates structured discovery theses with transit modeling, planetary radius estimates, false-positive assessment, and habitability analysis." }
+            { icon: Telescope, title: "Thesis-Grade Output", desc: "Generates structured discovery theses with light curve modeling, mass ratios, false-positive assessment, and astrophysical analysis." }
           ].map((feature, i) => (
             <motion.div 
               key={i} 
