@@ -142,7 +142,7 @@ Boot the Node dev server to launch the frontend client on port `3000`:
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser. Keep this and the FastAPI terminals running.
+Open [http://localhost:3000](http://localhost:3001) in your browser. Keep this and the FastAPI terminals running.
 
 ---
 
@@ -159,7 +159,7 @@ Copy this configuration into your IDE's MCP settings:
       "command": "node",
       "args": ["YOUR_ABSOLUTE_PATH_TO/Nasa_exohunter/mcp-server/dist/index.js"],
       "env": {
-        "EXOHUNTER_API_URL": "http://localhost:3000"
+        "EXOHUNTER_API_URL": "http://localhost:3001"
       }
     }
   }
