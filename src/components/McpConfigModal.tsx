@@ -11,7 +11,7 @@ const MCP_CONFIG = `{
   "mcpServers": {
     "sarkar-exohunter": {
       "command": "node",
-      "args": ["./mcp-server/dist/index.js"],
+      "args": ["[user path to nasa exohunter folder]/mcp-server/dist/index.js"],
       "env": {
         "EXOHUNTER_API_URL": "http://localhost:3000"
       }

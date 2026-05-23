@@ -27,7 +27,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           {/* GitHub Button */}
           <a
-            href="https://github.com/skoustav35/Nasa_exohunter.git"
+            href="https://github.com/skoustav35/Nasa_heaven_hunter.git"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 px-4 py-2 rounded-2xl transition-all hover:-translate-y-0.5 shadow-sm"
