@@ -25,6 +25,17 @@ export function Navbar() {
         </div>
         
         <div className="flex items-center gap-3">
+          {/* ExoHunter App Link */}
+          <a
+            href="https://sarkar-exohunter-v5.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm font-bold text-sky-400 hover:text-sky-300 bg-sky-500/10 hover:bg-sky-500/15 border border-sky-500/25 hover:border-sky-500/40 px-4 py-2 rounded-2xl transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-lg hover:shadow-sky-500/10"
+          >
+            <Telescope className="w-4 h-4" />
+            <span className="hidden sm:inline">ExoHunter v5</span>
+          </a>
+
           {/* GitHub Button */}
           <a
             href="https://github.com/skoustav35/Nasa_heaven_hunter.git"
