@@ -1,0 +1,21 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "discovery_theses",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "object_type", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "discovery_theses",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "tic_id", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

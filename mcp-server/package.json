@@ -1,0 +1,23 @@
+{
+  "name": "sarkar-exohunter-mcp",
+  "version": "2.0.0",
+  "description": "AstroForge MCP Server — Firebase-native analytical bridge for transient classification (Firestore + RTDB)",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "axios": "^1.16.1",
+    "firebase-admin": "^13.10.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2"
+  }
+}

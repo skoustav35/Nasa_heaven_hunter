@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2-alpine
+    container_name: exohunter_queue_broker
+    ports:
+      - "6379:6379"
+    restart: always
+
+  # Ensemble Astrophysics Engine (FastAPI on port 8000)
+  ensemble_engine:
+    build: .
+    container_name: astroforge_ensemble_engine
+    command: uvicorn api:app --host 0.0.0.0 --port 8000 --workers 2
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+    env_file:
+      - .env
+    restart: always
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  celery_worker:
+    build: .
+    container_name: exohunter_physics_worker
+    command: celery -A exohunter.celery_app worker --loglevel=info --concurrency=4
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+    env_file:
+      - .env
+    restart: always

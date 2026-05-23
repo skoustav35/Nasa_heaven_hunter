@@ -1,0 +1,9 @@
+{
+  "projectId": "sarkar-heaven-hunter-v2",
+  "appId": "1:141558100803:web:5c8e76f461e068bbb475f6",
+  "apiKey": "AIzaSyDvLA1NmVGshmKIIrpCHZWjyxl3LQlEFCg",
+  "authDomain": "sarkar-heaven-hunter-v2.firebaseapp.com",
+  "storageBucket": "sarkar-heaven-hunter-v2.firebasestorage.app",
+  "messagingSenderId": "141558100803",
+  "databaseURL": "https://sarkar-heaven-hunter-v2-default-rtdb.asia-southeast1.firebasedatabase.app"
+}

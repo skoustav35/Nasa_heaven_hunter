@@ -1,0 +1,28 @@
+{
+  "rules": {
+    "active_analyses": {
+      "$tic_id": {
+        ".read": true,
+        ".write": "auth != null || root.child('service_accounts').child(auth.uid).exists()"
+      }
+    },
+    "analyzed_targets": {
+      ".read": true,
+      "$tic_id": {
+        ".write": "auth != null"
+      }
+    },
+    "light_curves": {
+      "$tic_id": {
+        ".read": true,
+        ".write": "auth != null"
+      }
+    },
+    "ensemble_results": {
+      "$tic_id": {
+        ".read": true,
+        ".write": "auth != null"
+      }
+    }
+  }
+}
