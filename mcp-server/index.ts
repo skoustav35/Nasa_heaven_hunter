@@ -48,7 +48,7 @@ function timestamp() {
   return new Date().toISOString();
 }
 
-async function fetchWithTimeout(url: string, options: RequestInit = {}, timeoutMs: number = 15000): Promise<Response> {
+async function fetchWithTimeout(url: string, options: RequestInit = {}, timeoutMs: number = 600000): Promise<Response> {
   const controller = new AbortController();
   const id = setTimeout(() => controller.abort(), timeoutMs);
   try {
@@ -585,7 +585,7 @@ server.tool(
       // Give the Python engine up to 30 seconds to solve complex light curves
       const response = await axios.post(pythonEngineUrl, {
           tic_id: parseInt(tic_id as string)
-      }, { timeout: 30000 }); 
+      }, { timeout: 600000 }); 
 
       const engineResults = response.data;
 

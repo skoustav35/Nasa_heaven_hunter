@@ -153,7 +153,7 @@ class EnsembleAstrophysicsEngine:
 
         # Lomb-Scargle periodogram (best frequency)
         try:
-            freq_grid = np.linspace(0.01, 15.0, 10000)
+            freq_grid = np.linspace(0.01, 15.0, 1000)
             angular_freqs = 2.0 * np.pi * freq_grid
             power = lombscargle(time, flux - np.mean(flux), angular_freqs, normalize=True)
             best_idx = np.argmax(power)
@@ -446,7 +446,7 @@ class EnsembleAstrophysicsEngine:
                 print(f"[STINGRAY] Power spectrum failed: {e}; using fallback.", file=sys.stderr)
 
         # Scipy fallback: Lomb-Scargle power spectrum
-        freq_grid = np.linspace(0.001, 10.0, 5000)
+        freq_grid = np.linspace(0.001, 10.0, 500)
         angular_freqs = 2.0 * np.pi * freq_grid
         power = lombscargle(time, flux - np.mean(flux), angular_freqs, normalize=True)
         qpo_idx = np.argmax(power)
@@ -534,6 +534,15 @@ class EnsembleAstrophysicsEngine:
         # 🛡️ HARDENING 1: Data Sanitization
         valid_indices = ~(np.isnan(time) | np.isnan(flux) | np.isnan(err))
         time, flux, err = time[valid_indices], flux[valid_indices], err[valid_indices]
+        
+        # DOWN-SAMPLE TO PREVENT OOM
+        MAX_POINTS = 10000
+        if len(time) > MAX_POINTS:
+            step = len(time) // MAX_POINTS
+            time = time[::step]
+            flux = flux[::step]
+            err = err[::step]
+
         
         if len(time) < 100:
             return {
